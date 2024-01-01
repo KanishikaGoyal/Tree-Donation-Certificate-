@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #008000; /* Green color for the heading */
+}
+
+.label-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added box shadow */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Modified styles for the file input */
+input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #008000; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+button:hover {
+    background-color: #005700;
+}
+</style>
+</head>
+<body>
+    <h1>TREE DONATION CERTIFICATE</h1>
+    <div className="label-container">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" id="file" name="file" accept=".xlsx,.xls"/>
+        <button type="submit">Submit</button>
+    </form>
+    </div> 
+
+    
+</body>
+</html>

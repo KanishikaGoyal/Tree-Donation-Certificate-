@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Donation Certification</title>
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: #f8faf8;
+        color: #495057;
+        margin: 20px;
+    }
+
+    .certificate {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #28a745;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    h2 {
+        color: #007bff;
+        font-size: 20px;
+    }
+
+    h3 {
+        color: #e44d26;
+        font-size: 18px;
+    }
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .donor-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #e44d26;
+        margin-bottom: 5px;
+    }
+
+    .donation-details {
+        margin-bottom: 20px;
+    }
+
+    .thank-you {
+        font-weight: bold;
+        color: #007bff;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .issued-on {
+        color: #6c757d;
+        font-style: italic;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+    <div class="certificate">
+      <h1>Tree Donation Certification</h1>
+      <p>This is to proudly certify that</p>
+      <div class="donor-name"><%= user.name %></div>
+      <p>has made a generous contribution of</p>
+      <div class="donation-details">
+          <h3>Rs.<%= user.amount %></h3>
+          <p>for planting</p>
+          <h3><%= user.noOfTrees %>trees</h3>
+      </div>
+      <p>and has become a valued contributor to environmental sustainability.</p>
+      <p class="thank-you">Thank you for your commitment to making the world a greener place!</p>
+      <p class="issued-on">Certificate issued on <span style="color: #e74c3c;"><%= new Date().toLocaleDateString() %></span></p>
+  </div>
+</body>
+ </html>
